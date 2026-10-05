@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vértice — Criação de Sites Modernos</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{bg:'#080C14',card:'#0F172A',neon:'#3DFF8B'},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}
+</script>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:90px;background:#080C14}
+body{background:#080C14;color:#cbd5e1;font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+.glass{background:rgba(15,23,42,.65);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(168,85,247,.28);border-radius:16px;box-shadow:0 0 28px rgba(139,92,246,.10)}
+.glow{box-shadow:0 0 22px rgba(61,255,139,.45)}
+.grid-bg{background-image:linear-gradient(rgba(61,255,139,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(61,255,139,.04) 1px,transparent 1px);background-size:44px 44px}
+.btn-n{background:#3DFF8B;color:#080C14;font-weight:700;border-radius:12px;transition:box-shadow .2s}
+.btn-n:hover{box-shadow:0 0 26px rgba(61,255,139,.7)}
+.btn-o{border:1px solid rgba(168,85,247,.55);color:#fff;border-radius:12px;transition:background .2s}
+.btn-o:hover{background:rgba(168,85,247,.15)}
+.inp{width:100%;background:#080C14;border:1px solid rgba(168,85,247,.3);border-radius:12px;padding:.75rem 1rem;color:#fff;outline:none}
+.inp:focus{border-color:#3DFF8B;box-shadow:0 0 0 3px rgba(61,255,139,.15)}
+a:focus-visible,button:focus-visible{outline:2px solid #3DFF8B;outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-bg/80 backdrop-blur-xl" style="padding-top:env(safe-area-inset-top,0px)">
+  <nav class="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#inicio" class="text-2xl font-extrabold text-white tracking-tight">Vért<span class="text-neon">i</span>ce<span class="text-neon">.</span></a>
+    <ul class="hidden lg:flex gap-7 text-sm font-medium">
+      <li><a class="hover:text-neon" href="#inicio">Início</a></li>
+      <li><a class="hover:text-neon" href="#sobre">Sobre Mim</a></li>
+      <li><a class="hover:text-neon" href="#servicos">Meus Serviços</a></li>
+      <li><a class="hover:text-neon" href="#projetos">Meus Projetos</a></li>
+      <li><a class="hover:text-neon" href="#processo">Meu Processo</a></li>
+      <li><a class="hover:text-neon" href="#depoimentos">Depoimentos</a></li>
+      <li><a class="hover:text-neon" href="#contato">Contato</a></li>
+    </ul>
+    <a href="#contato" class="btn-n hidden lg:inline-block px-5 py-2.5 text-sm">Solicitar Orçamento ↗</a>
+    <button id="menuBtn" class="lg:hidden text-neon p-2" aria-label="Abrir menu">
+      <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h20M3 13h20M3 19h20"/></svg>
+    </button>
+  </nav>
+  <div id="mobileMenu" class="hidden lg:hidden px-5 pb-5 bg-bg/95 border-t border-white/5">
+    <ul class="flex flex-col gap-1 py-3 text-sm font-medium">
+      <li><a class="block py-2" href="#inicio">Início</a></li>
+      <li><a class="block py-2" href="#sobre">Sobre Mim</a></li>
+      <li><a class="block py-2" href="#servicos">Meus Serviços</a></li>
+      <li><a class="block py-2" href="#projetos">Meus Projetos</a></li>
+      <li><a class="block py-2" href="#processo">Meu Processo</a></li>
+      <li><a class="block py-2" href="#depoimentos">Depoimentos</a></li>
+      <li><a class="block py-2" href="#contato">Contato</a></li>
+    </ul>
+    <a href="#contato" class="btn-n block text-center py-3 text-sm">Solicitar Orçamento ↗</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="inicio" class="relative grid-bg pt-32 pb-20 overflow-hidden">
+  <div class="absolute -top-20 right-0 w-[500px] h-[500px] rounded-full bg-purple-600/25 blur-[120px]"></div><div class="absolute bottom-0 -left-20 w-[380px] h-[380px] rounded-full bg-neon/10 blur-[120px]"></div>
+  <div class="relative max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 text-sm text-neon glass px-4 py-1.5 rounded-full" style="border-radius:999px"><span class="w-2 h-2 rounded-full bg-gradient-to-r from-neon to-purple-500 glow"></span>Desenvolvedor Web &amp; Designer UI/UX</span>
+      <h1 class="mt-6 text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">Desenvolvo sites modernos, rápidos e focados em gerar resultados para o seu negócio.</h1>
+      <p class="mt-6 text-lg text-slate-400 max-w-xl">Ajudo empresas e profissionais a conquistarem uma presença digital marcante com design exclusivo e alta performance.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#projetos" class="btn-n px-7 py-3.5">Ver Meu Portfólio ➔</a>
+        <a href="https://wa.me/5548996813418" class="btn-o px-7 py-3.5 font-semibold" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+      </div>
+      <div class="mt-8 glass inline-block px-5 py-3 font-mono text-sm text-neon">&lt;/&gt; Código Limpo • Design Exclusivo • SEO Otimizado</div>
+    </div>
+    <div class="relative flex justify-center">
+      <div class="absolute inset-0 m-auto w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-purple-500/35 blur-[90px]"></div>
+      <div class="relative w-72 h-80 sm:w-80 sm:h-96 glass overflow-hidden" style="border-color:rgba(168,85,247,.55)">
+        <img src="img/foto.png" alt="Foto do desenvolvedor Vértice" class="w-full h-full object-cover object-[70%_18%]" width="640" height="800" decoding="async">
+      </div>
+      <div class="glass absolute left-2 sm:left-4 -bottom-4 px-4 py-3"><p class="text-2xl font-extrabold text-neon">100%</p><p class="text-xs text-slate-400">Clientes Satisfeitos</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-20 max-w-7xl mx-auto px-5">
+  <div class="grid lg:grid-cols-2 gap-6">
+    <div class="glass p-8">
+      <span class="inline-flex items-center gap-2 text-sm text-emerald-400 mb-5">🟢 Disponível para novos projetos</span>
+      <h2 class="text-3xl font-bold text-white">Sobre Mim</h2>
+      <p class="mt-4 leading-relaxed">Sou desenvolvedor web e designer UI/UX com mais de 5 anos de experiência criando sites sob medida. Cada projeto começa com o objetivo do seu negócio e termina em uma página rápida, bonita e pronta para converter visitantes em clientes.</p>
+      <p class="mt-4 leading-relaxed">Atendo desde profissionais autônomos até empresas em crescimento, cuidando de tudo: design, código, SEO e publicação.</p>
+    </div>
+    <div id="servicos" class="glass p-8">
+      <h2 class="text-3xl font-bold text-white">Minha Expertise</h2>
+      <div class="mt-6 space-y-6" id="skills"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="py-20 max-w-7xl mx-auto px-5">
+  <h2 class="text-3xl sm:text-4xl font-bold text-white">Meus Projetos</h2>
+  <p class="mt-3 text-slate-400 max-w-xl">Alguns dos sites que criei e os resultados que entregaram.</p>
+  <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <article class="glass overflow-hidden flex flex-col">
+      <div class="h-48 bg-slate-900 overflow-hidden">
+        <img src="img/abadeus-marketplace.jpg" alt="Preview do ABADEUS Marketplace" class="w-full h-full object-cover object-top" width="800" height="450" loading="lazy" decoding="async">
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="text-xl font-bold text-white">ABADEUS Marketplace</h3>
+        <p class="mt-2 text-sm text-slate-400 flex-1">Marketplace comunitário de Criciúma (SC) para descobrir produtos, serviços e lojas locais com empreendedores verificados.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">UI/UX</span><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">Marketplace</span><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">Criciúma</span></div>
+      </div>
+    </article>
+    <article class="glass overflow-hidden flex flex-col">
+      <div class="h-48 bg-slate-900 overflow-hidden grid grid-cols-2 gap-0.5">
+        <img src="img/mk-gourmet-hero.png" alt="MK Gourmet — página inicial" class="w-full h-full object-cover object-center" width="400" height="360" loading="lazy" decoding="async">
+        <img src="img/mk-gourmet-catalogo.png" alt="MK Gourmet — catálogo de produtos" class="w-full h-full object-cover object-top" width="400" height="360" loading="lazy" decoding="async">
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="text-xl font-bold text-white">MK Gourmet — Catálogo SaaS</h3>
+        <p class="mt-2 text-sm text-slate-400 flex-1">Landing e catálogo digital para confeitaria, com pedidos, informações de retirada e contato direto no WhatsApp.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">SaaS</span><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">Catálogo</span><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">WhatsApp</span></div>
+      </div>
+    </article>
+    <article class="glass overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+      <div class="h-48 bg-slate-900 overflow-hidden">
+        <img src="img/clinica-kamila-mota.jpg" alt="Preview do site Dra. Kamila Mota" class="w-full h-full object-cover object-top" width="800" height="450" loading="lazy" decoding="async">
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="text-xl font-bold text-white">Dra. Kamila Mota — Odontologia</h3>
+        <p class="mt-2 text-sm text-slate-400 flex-1">Site institucional para clínica odontológica com procedimentos, agendamento e atendimento em Criciúma e Içara.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">HTML</span><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">UI/UX</span><span class="px-2.5 py-1 rounded-full bg-purple-500/15 text-purple-300">Agendamento</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section id="processo" class="py-20 max-w-7xl mx-auto px-5">
+  <h2 class="text-3xl sm:text-4xl font-bold text-white">Como funciona a criação do seu site</h2>
+  <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="steps"></div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="py-20 max-w-7xl mx-auto px-5">
+  <div class="grid lg:grid-cols-5 gap-6">
+    <figure class="glass p-8 lg:col-span-3">
+      <div class="text-neon text-3xl">★★★★★</div>
+      <blockquote class="mt-4 text-xl text-white leading-relaxed">“O novo site superou o que eu imaginava. Ficou rápido, lindo e, em dois meses, o número de pedidos de orçamento dobrou. Entrega no prazo e comunicação impecável.”</blockquote>
+      <figcaption class="mt-6 flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-neon/20 grid place-items-center text-neon font-bold">MR</div><div><p class="font-semibold text-white">Marina Ribeiro</p><p class="text-sm text-slate-400">Diretora, Clínica Vitalis</p></div></figcaption>
+    </figure>
+    <div class="lg:col-span-2 grid grid-cols-3 lg:grid-cols-1 gap-4">
+      <div class="glass p-5"><p class="text-3xl font-extrabold text-neon">+50</p><p class="text-sm text-slate-400">Sites no ar</p></div>
+      <div class="glass p-5"><p class="text-3xl font-extrabold text-neon">+40</p><p class="text-sm text-slate-400">Clientes atendidos</p></div>
+      <div class="glass p-5"><p class="text-3xl font-extrabold text-neon">100%</p><p class="text-sm text-slate-400">Responsivo</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-20 max-w-7xl mx-auto px-5">
+  <h2 class="text-3xl sm:text-4xl font-bold text-white text-center">Pronto para criar o site da sua empresa?</h2>
+  <div class="mt-12 grid lg:grid-cols-2 gap-6">
+    <div class="glass p-8 space-y-6">
+      <h3 class="text-xl font-bold text-white">Fale direto comigo</h3>
+      <p class="flex items-center gap-4"><span class="w-11 h-11 rounded-xl bg-neon/10 text-neon grid place-items-center">✉</span><span><span class="block text-xs text-slate-500">E-mail</span><a href="mailto:developerfreelancer02@gmail.com" class="text-white hover:text-neon">developerfreelancer02@gmail.com</a></span></p>
+      <p class="flex items-center gap-4"><span class="w-11 h-11 rounded-xl bg-neon/10 text-neon grid place-items-center">☏</span><span><span class="block text-xs text-slate-500">WhatsApp</span><a href="https://wa.me/5548996813418" class="text-white hover:text-neon" target="_blank" rel="noopener noreferrer">(48) 99681-3418</a></span></p>
+      <p class="flex items-center gap-4"><span class="w-11 h-11 rounded-xl bg-neon/10 text-neon grid place-items-center">⌖</span><span><span class="block text-xs text-slate-500">Cidade</span><span class="text-white">Criciúma, SC</span></span></p>
+    </div>
+    <form id="form" class="glass p-8 space-y-4" action="https://formsubmit.co/developerfreelancer02@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nova solicitação — Vértice">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_blacklist" value="spam,viagra">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div><label class="text-sm text-slate-400" for="n">Nome</label><input id="n" name="nome" required class="inp mt-1" placeholder="Seu nome" autocomplete="name"></div>
+      <div><label class="text-sm text-slate-400" for="e">E-mail</label><input id="e" name="email" type="email" required class="inp mt-1" placeholder="voce@empresa.com" autocomplete="email"></div>
+      <div><label class="text-sm text-slate-400" for="t">Tipo de site desejado</label>
+        <select id="t" name="tipo_de_site" class="inp mt-1"><option>Site institucional</option><option>Landing Page</option><option>Loja virtual / E-commerce</option><option>Portfólio</option><option>Outro</option></select></div>
+      <div><label class="text-sm text-slate-400" for="m">Mensagem</label><textarea id="m" name="mensagem" rows="4" required class="inp mt-1" placeholder="Conte um pouco sobre o seu projeto"></textarea></div>
+      <button id="formBtn" type="submit" class="btn-n w-full py-3.5">Enviar Solicitação ✈</button>
+      <p id="ok" class="hidden text-center text-emerald-400 text-sm">Solicitação enviada! Retorno em até 24 horas.</p>
+      <p id="formErr" class="hidden text-center text-red-400 text-sm">Não foi possível enviar. Abra o site por um servidor local (não pelo arquivo) e confirme o e-mail do FormSubmit no Gmail (também na spam).</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- RODAPÉ -->
+<footer class="border-t border-white/5 py-10">
+  <div class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+    <a href="#inicio" class="text-xl font-extrabold text-white">Vért<span class="text-neon">i</span>ce<span class="text-neon">.</span></a>
+    <ul class="flex flex-wrap justify-center gap-5"><li><a class="hover:text-neon" href="#sobre">Sobre</a></li><li><a class="hover:text-neon" href="#projetos">Projetos</a></li><li><a class="hover:text-neon" href="#processo">Processo</a></li><li><a class="hover:text-neon" href="#contato">Contato</a></li></ul>
+    <ul class="flex gap-4 text-neon"><li><a href="#" aria-label="Instagram">Instagram</a></li><li><a href="#" aria-label="LinkedIn">LinkedIn</a></li><li><a href="#" aria-label="GitHub">GitHub</a></li></ul>
+  </div>
+  <p class="mt-6 text-center text-xs text-slate-500">© 2026 Vértice. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+const skills=[["Criação de Sites Institucionais & Landing Pages",98],["Design UI/UX & Prototipagem",95],["Lojas Virtuais / E-commerce",90],["Otimização SEO & Velocidade",92]];
+document.getElementById('skills').innerHTML=skills.map(([t,v])=>`<div><div class="flex justify-between text-sm mb-2"><span class="text-white">${t}</span><span class="text-neon font-semibold">${v}%</span></div><div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-gradient-to-r from-neon to-purple-500 glow" style="width:${v}%"></div></div></div>`).join('');
+const steps=[["Alinhamento & Requisitos","Entendo seu negócio, público e objetivos."],["Estratégia & Wireframe","Defino a estrutura e o caminho do visitante."],["Design Visual","Crio um layout exclusivo com a sua identidade."],["Desenvolvimento & Código","Programo um site limpo, leve e responsivo."],["Testes de Performance","Verifico velocidade, SEO e todos os dispositivos."],["Publicação do Site","Coloco no ar e acompanho os primeiros resultados."]];
+document.getElementById('steps').innerHTML=steps.map(([t,d],i)=>`<div class="glass p-6"><div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neon to-purple-500 text-bg font-extrabold grid place-items-center glow">${i+1}</div><h3 class="mt-4 text-lg font-bold text-white">${t}</h3><p class="mt-2 text-sm text-slate-400">${d}</p></div>`).join('');
+document.getElementById('menuBtn').onclick=()=>document.getElementById('mobileMenu').classList.toggle('hidden');
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.onclick=()=>document.getElementById('mobileMenu').classList.add('hidden'));
+document.getElementById('form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('formBtn');
+  const ok = document.getElementById('ok');
+  const err = document.getElementById('formErr');
+  ok.classList.add('hidden');
+  err.classList.add('hidden');
+
+  // FormSubmit não funciona abrindo o HTML direto (file://)
+  if (location.protocol === 'file:') {
+    err.classList.remove('hidden');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || data.success === 'false') throw new Error('fail');
+    ok.classList.remove('hidden');
+    form.reset();
+  } catch (_) {
+    err.classList.remove('hidden');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Enviar Solicitação ✈';
+  }
+});
+</script>
+</body>
+</html>
